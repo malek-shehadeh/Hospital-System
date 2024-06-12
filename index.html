@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="sec">
+      <main>
+        <section class="form-container">
+          <h1>Patient Registration Form</h1>
+          <form id="patientForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="fullName" required />
+
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" required />
+
+            <label for="date">Date of Birth:</label>
+            <input type="date" id="date" name="dob" required />
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="chronic">Chronic Diseases:</label>
+            <select id="chronic" name="chronicDiseases" required>
+              <option value="none">None</option>
+              <option value="diabetes">Diabetes</option>
+              <option value="hypertension">Hypertension</option>
+              <option value="asthma">Asthma</option>
+              <option value="heart disease">Heart Disease</option>
+              <option value="other">Other</option>
+            </select>
+
+            <button id="btn" type="submit">Submit</button>
+          </form>
+          <section class="cards-container" id="cardsContainer">
+            <!--  Patient cards will be appen -->
+        </section>
+      </main>
+    </section>
+
+    <!-- <div id="card-container"></div> -->
+
+    <footer>
+      <p>&copy; 2024 Hospital Form. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
