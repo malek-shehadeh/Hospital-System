@@ -53,7 +53,6 @@
 //   }
 // };
 ///////////////////////////////////////////////
-
 // Retrieve the 'users' data from the local storage, and parse it from JSON format to JavaScript array.
 window.addEventListener("load", function () {
   let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -63,52 +62,33 @@ window.addEventListener("load", function () {
   });
 });
 
-///////////////////////////////////////////////
-
-function patient(name, Date, gender, password, Chronic) {
+// Rest of your code remains unchanged
+function Patients(name, password, Date, Gender, Chronic) {
   this.name = name;
-  this.Date = Date;
-  this.gender = gender;
   this.password = password;
+  this.Date = Date;
+  this.Gender = Gender;
   this.Chronic = Chronic;
 }
 
 document.getElementById("btn").addEventListener("click", function (e) {
   e.preventDefault();
 
-  let arr = [];
-  let name = document.getElementById("name").value;
-  //   arr.push(name);
-  ///////////////////
-  let date = document.getElementById("date").value;
-  //   arr.push(date);
-  //////////////////
+  let name = document.getElementById("full-name").value;
+  let password = document.getElementById("password").value;
+  let date = document.getElementById("dob").value;
   let gender = document.getElementById("gender").value;
-  //   arr.push(gender);
+  let chronicDisease = document.getElementById("chronic-disease").value;
 
-  ///////////////////
-  let pass = document.getElementById("pass").value;
-  //   arr.push(pass);
-
-  //////////////////
-  let Chronic = document.getElementById("chronic").value;
-  //   arr.push(Chronic);
-
-  /////////////////
-  //   let n = JSON.stringify(array);
-  //   localStorage.setItem("patient", n);
-  let obj = new patient(name, Date, gender, password, Chronic);
-
-  /////////////////////////////////////////////////
+  let object = new Patients(name, password, date, gender, chronicDisease);
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
-  users.push(obj);
+  users.push(object);
   localStorage.setItem("users", JSON.stringify(users));
 
-  createCard(obj);
+  createCard(object);
 });
 
-///////////////////////////////////////////////////
 function createCard(patient) {
   let cardContainer = document.getElementById("card-container");
 
@@ -131,7 +111,10 @@ function createCard(patient) {
   chronicPara.innerHTML = "Chronic Disease: " + patient.Chronic;
 
   let userImage = document.createElement("img");
-  userImage.setAttribute("src", "image/user.png");
+  userImage.setAttribute(
+    "src",
+    "image/national-cancer-institute-701-FJcjLAQ-unsplash.jpg"
+  );
   cardDiv.appendChild(userImage);
 
   cardDiv.appendChild(namePara);

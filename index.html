@@ -3,66 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Registration Form</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Patients Management System</title>
+    <link rel="stylesheet" href="df.css" />
   </head>
   <body>
     <header>
+      <h3 id="site-name">Patients Management System</h3>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <section class="sec">
-      <main>
-        <section class="form-container">
-          <h1>Patient Registration Form</h1>
-          <form id="patientForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="fullName" required />
 
-            <label for="pass">Password:</label>
-            <input type="password" id="pass" name="password" required />
+    <main>
+      <section class="form-section">
+        <h2>Add New Patient</h2>
+        <form id="form">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required />
 
-            <label for="date">Date of Birth:</label>
-            <input type="date" id="date" name="dob" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
 
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required />
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
 
-            <label for="chronic">Chronic Diseases:</label>
-            <select id="chronic" name="chronicDiseases" required>
-              <option value="none">None</option>
-              <option value="diabetes">Diabetes</option>
-              <option value="hypertension">Hypertension</option>
-              <option value="asthma">Asthma</option>
-              <option value="heart disease">Heart Disease</option>
-              <option value="other">Other</option>
-            </select>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
 
-            <button id="btn" type="submit">Submit</button>
-          </form>
-          <section class="cards-container" id="cardsContainer">
-            <!--  Patient cards will be appen -->
-        </section>
-      </main>
-    </section>
+          <label for="chronic-disease">Chronic Disease:</label>
+          <select id="chronic-disease" name="chronic-disease">
+            <option value="none">None</option>
+            <option value="diabetes">Diabetes</option>
+            <option value="hypertension">Hypertension</option>
+            <option value="asthma">Asthma</option>
+            <option value="arthritis">Arthritis</option>
+          </select>
 
-    <!-- <div id="card-container"></div> -->
+          <button type="submit" id="btn">send</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="card-container"></div>
 
     <footer>
-      <p>&copy; 2024 Hospital Form. All rights reserved.</p>
+      <p>&copy; 2024 Patients Management System</p>
     </footer>
-    <script src="main.js"></script>
+
+    <script src="sdsds.js"></script>
   </body>
 </html>
